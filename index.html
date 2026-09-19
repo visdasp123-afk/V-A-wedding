@@ -139,6 +139,291 @@ section{
     line-height:1.8;
 }
 
+/* CUSTOM CARD SHOWCASE */
+
+.card-showcase {
+    background:#f4e9df;
+}
+
+.card-wrapper {
+    max-width:980px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+}
+
+.invitation-card {
+    position:relative;
+    width:min(100%, 900px);
+    min-height:950px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.15), transparent 24%),
+        linear-gradient(135deg, #f7ece6 0%, #f3e3dc 100%);
+    border:1px solid rgba(111,76,61,0.15);
+    box-shadow:0 20px 60px rgba(93,65,48,0.12);
+    overflow:hidden;
+    padding:36px 36px 28px;
+}
+
+.invitation-card::before,
+.invitation-card::after {
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(179,115,99,0.18);
+    filter:blur(6px);
+}
+
+.invitation-card::before {
+    left:-70px;
+    top:-58px;
+}
+
+.invitation-card::after {
+    right:-70px;
+    bottom:-60px;
+}
+
+.card-flowers {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0.95;
+}
+
+.flower {
+    position:absolute;
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(246,196,201,0.9) 0%, rgba(240,161,170,0.85) 18%, rgba(182,100,112,0.8) 45%, rgba(111,68,75,0.2) 100%);
+    box-shadow: inset 0 0 18px rgba(255,255,255,0.7);
+}
+
+.flower::before,
+.flower::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:inherit;
+    transform:rotate(45deg);
+}
+
+.flower::after {
+    transform:rotate(-45deg);
+}
+
+.flower.left {
+    left:-45px;
+    top:-10px;
+    transform:scale(1.2);
+}
+
+.flower.right {
+    right:-55px;
+    top:-20px;
+    transform:scale(1.18);
+}
+
+.flower.bottom-left {
+    left:-60px;
+    bottom:-55px;
+    transform:scale(1.2);
+}
+
+.flower.bottom-right {
+    right:-60px;
+    bottom:-60px;
+    transform:scale(1.25);
+}
+
+.card-content {
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding:10px 18px 10px;
+}
+
+.card-header {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:18px;
+    margin:0 auto 20px;
+    max-width:780px;
+}
+
+.card-header .family-line {
+    flex:1;
+    text-align:center;
+    font-size:clamp(18px,2vw,32px);
+    line-height:1.3;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:#3a2720;
+    margin-top:10px;
+}
+
+.card-header .family-line strong {
+    font-weight:700;
+}
+
+.card-signature {
+    width:150px;
+    height:140px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Great Vibes',cursive;
+    font-size:120px;
+    color:#7b4d41;
+    opacity:0.92;
+    margin-top:-10px;
+}
+
+.card-intro {
+    max-width:710px;
+    margin:0 auto 8px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(26px, 3vw, 40px);
+    line-height:1.25;
+    color:#2d1d18;
+    font-style:italic;
+}
+
+.card-intro .script-name {
+    display:block;
+    margin-top:18px;
+    font-family:'Great Vibes',cursive;
+    font-style:normal;
+    font-size:clamp(48px, 7vw, 104px);
+    line-height:0.9;
+    color:#401f1a;
+}
+
+.card-subtitle {
+    margin-top:22px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(19px,2vw,28px);
+    line-height:1.35;
+    color:#3a2a25;
+}
+
+.card-schedule {
+    max-width:690px;
+    margin:24px auto 0;
+    border-top:1px solid rgba(66,43,35,0.55);
+    border-bottom:1px solid rgba(66,43,35,0.55);
+    display:grid;
+    grid-template-columns:1fr 1.1fr 1fr;
+    align-items:center;
+    gap:16px;
+    padding:18px 0;
+}
+
+.schedule-item {
+    position:relative;
+    padding:10px 16px;
+    min-height:120px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    color:#2f201d;
+    text-align:center;
+}
+
+.schedule-item + .schedule-item::before {
+    content:"";
+    position:absolute;
+    left:-8px;
+    top:12%;
+    width:1px;
+    height:76%;
+    background:rgba(66,43,35,0.55);
+}
+
+.schedule-date {
+    font-size:52px;
+    line-height:1;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.schedule-label {
+    font-size:24px;
+    font-weight:600;
+    margin-top:8px;
+    display:block;
+}
+
+.schedule-venue {
+    font-size:20px;
+    line-height:1.3;
+    margin-top:8px;
+}
+
+.schedule-time {
+    font-size:22px;
+    line-height:1.25;
+    margin-top:8px;
+}
+
+.schedule-icon {
+    font-size:35px;
+    line-height:1;
+    margin-bottom:2px;
+    color:#4d332f;
+}
+
+.card-bottom {
+    max-width:760px;
+    margin:26px auto 0;
+    padding-top:10px;
+    border-top:1px solid rgba(66,43,35,0.55);
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(20px,2vw,28px);
+    line-height:1.45;
+    color:#2f201d;
+}
+
+.card-bottom strong {
+    font-weight:700;
+}
+
+.card-footer {
+    max-width:760px;
+    margin:28px auto 0;
+    padding-top:16px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(23px,2vw,34px);
+    line-height:1.35;
+    color:#2f201d;
+}
+
+.card-footer .small {
+    display:block;
+    font-size:22px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+    color:#5c3d35;
+}
+
+.card-footer .signature-mark {
+    display:block;
+    margin-top:12px;
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    color:#6d4139;
+}
+
 /* COUPLE */
 
 .couple-grid{
@@ -462,6 +747,31 @@ footer{
         font-size:20px;
     }
 
+    .card-header {
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card-signature {
+        width:120px;
+        height:100px;
+        font-size:92px;
+        margin-top:0;
+    }
+
+    .card-schedule {
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .schedule-item + .schedule-item::before {
+        left:50%;
+        top:-8px;
+        width:70%;
+        height:1px;
+        transform:translateX(-50%);
+    }
+
     .couple-grid,
     .details-grid,
     .family-grid{
@@ -556,9 +866,87 @@ footer{
 
 </section>
 
+<!-- CARD SHOWCASE -->
 
+<section class="card-showcase">
+    <div class="container">
+        <div class="heading">
+            <div class="small">Original Invitation</div>
+            <h2>Wedding Card Preview</h2>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="invitation-card" aria-label="Wedding invitation card preview">
+                <div class="card-flowers" aria-hidden="true">
+                    <div class="flower left"></div>
+                    <div class="flower right"></div>
+                    <div class="flower bottom-left"></div>
+                    <div class="flower bottom-right"></div>
+                </div>
+
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="family-line">
+                            Mr. Haridasan (Rtd. BSNL) &amp; Mrs. Sheela<br>
+                            'Peechanangadath', Civil Station P.O. Kozhikode<br>
+                            Mob: 945922233, 9447077690
+                        </div>
+
+                        <div class="card-signature">V</div>
+                    </div>
+
+                    <div class="card-intro">
+                        We cordially invite you and your family to grace<br>
+                        the auspicious occasion of the wedding reception<br>
+                        of our beloved son
+                        <span class="script-name">Vishnu <span style="font-family:'Cormorant Garamond',serif; font-style:italic; color:#3a2622;">with</span> Ajisha</span>
+                    </div>
+
+                    <div class="card-subtitle">
+                        D/o Mr. Babu &amp; Mrs. Seena<br>
+                        Venginimukkath, Kannankara, Chelannur
+                    </div>
+
+                    <div class="card-schedule">
+                        <div class="schedule-item">
+                            <div class="schedule-icon">📅</div>
+                            <div class="schedule-label">On Sunday</div>
+                            <div class="schedule-date">25</div>
+                            <div class="schedule-venue">October 2026</div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div class="schedule-icon">📍</div>
+                            <div class="schedule-label">At</div>
+                            <div class="schedule-venue">our residence</div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div class="schedule-icon">⏰</div>
+                            <div class="schedule-label">From</div>
+                            <div class="schedule-time">4:30 pm<br>to 8:30 pm</div>
+                        </div>
+                    </div>
+
+                    <div class="card-bottom">
+                        The marriage will be solemnised on 25 October 2026 (1202 Thulam 8)<br>
+                        during the auspicious moment between 11:00 am and 11:45 am
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="small">Location</span>
+                        <strong>(Wedding party departs our residence at 10:00 AM)</strong><br>
+                        With best compliments from :<br>
+                        Aswathi, Prathyush, Ishan, Juvan,<br>
+                        Friends &amp; Relatives<br>
+                        <span class="signature-mark">—</span>
+                        <div style="font-size:24px; font-style:italic; margin-top:8px;">No function on the previous day</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
 
 <!-- INVITATION -->
 
