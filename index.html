@@ -604,6 +604,40 @@ section{
     color:#6f5c50;
 }
 
+/* INVITATION PHOTO */
+
+.invitation-photo-section{
+    background:#f4e9df;
+}
+
+.invitation-photo-wrap{
+    max-width:850px;
+    margin:auto;
+    background:#fffaf4;
+    border:1px solid #d4bda8;
+    box-shadow:0 18px 45px rgba(80,50,30,.12);
+    padding:16px;
+}
+
+.invitation-photo-wrap img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
+
+.photo-fallback{
+    display:none;
+    padding:30px 20px;
+    text-align:center;
+    color:#704b37;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    line-height:1.5;
+    background:#fffaf4;
+    border-radius:10px;
+}
+
 /* GALLERY */
 
 .gallery{
@@ -870,6 +904,10 @@ footer{
 
 <section class="card-showcase">
     <div class="container">
+        <div class="heading">
+            <h2>Wedding Card Preview</h2>
+        </div>
+
         <div class="card-wrapper">
             <div class="invitation-card" aria-label="Wedding invitation card preview">
                 <div class="card-flowers" aria-hidden="true">
@@ -973,6 +1011,21 @@ footer{
 
 </section>
 
+<!-- ORIGINAL WEDDING INVITATION PHOTO -->
+
+<section class="invitation-photo-section">
+    <div class="container">
+        <div class="heading">
+            <div class="small">Our Invitation</div>
+            <h2>Wedding Invitation Card</h2>
+        </div>
+
+        <div class="invitation-photo-wrap">
+            <img src="invitation.jpg" alt="Vishnu and Ajisha wedding invitation" onerror="this.style.display='none'; this.parentNode.querySelector('.photo-fallback').style.display='block';">
+            <div class="photo-fallback">Upload the invitation photo as <strong>invitation.jpg</strong> in the project folder to display it here.</div>
+        </div>
+    </div>
+</section>
 
 <!-- WEDDING DETAILS -->
 
@@ -994,24 +1047,17 @@ footer{
                 <h3>Wedding Ceremony</h3>
 
                 <div class="time">
-                    25 October 2026<br>
+                    Sunday, 25 October 2026<br>
                     11:00 AM – 11:45 AM
                 </div>
 
                 <p>
-                    Venginimukkath House<br>
-                    Kannankara, Chelannur
+                    We would be honoured to have your presence at the auspicious wedding ceremony.
                 </p>
 
-                <a
-                    class="map-btn"
-                    href="https://maps.app.goo.gl/DnLCfx7nofAPwhdd6"
-                    target="_blank">
-                    View Location
-                </a>
+                <a class="map-btn" href="#">View Location</a>
 
             </div>
-
 
             <div class="event-card">
 
@@ -1020,21 +1066,15 @@ footer{
                 <h3>Reception</h3>
 
                 <div class="time">
-                    25 October 2026<br>
-                    5:00 PM – 9:00 PM
+                    Sunday, 25 October 2026<br>
+                    4:30 PM – 8:30 PM
                 </div>
 
                 <p>
-                    Peechanangadath House<br>
-                    Civil Station, Kozhikode
+                    Join us for a joyful evening of blessings, laughter, and family celebration.
                 </p>
 
-                <a
-                    class="map-btn"
-                    href="https://maps.app.goo.gl/FyPbNhfC7Z5NZA266"
-                    target="_blank">
-                    View Location
-                </a>
+                <a class="map-btn" href="#">Get Directions</a>
 
             </div>
 
@@ -1043,244 +1083,118 @@ footer{
     </div>
 
 </section>
-
 
 <!-- COUNTDOWN -->
 
 <section class="countdown-section">
-
     <div class="container">
-
         <div class="heading">
-
-            <div class="small">
-                The Big Day
-            </div>
-
-            <h2>
-                Counting the Moments
-            </h2>
-
+            <div class="small">Counting Down</div>
+            <h2>Our Big Day</h2>
         </div>
 
         <div class="countdown">
-
             <div class="count-box">
-                <span id="days">0</span>
+                <span id="days">00</span>
                 <small>Days</small>
             </div>
-
             <div class="count-box">
-                <span id="hours">0</span>
+                <span id="hours">00</span>
                 <small>Hours</small>
             </div>
-
             <div class="count-box">
-                <span id="minutes">0</span>
+                <span id="minutes">00</span>
                 <small>Minutes</small>
             </div>
-
             <div class="count-box">
-                <span id="seconds">0</span>
+                <span id="seconds">00</span>
                 <small>Seconds</small>
             </div>
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- GALLERY -->
 
 <section class="gallery">
-
     <div class="container">
-
         <div class="heading">
-
-            <div class="small">
-                Memories
-            </div>
-
-            <h2>
-                A Glimpse of Us
-            </h2>
-
+            <div class="small">Moments</div>
+            <h2>Our Memories</h2>
         </div>
 
         <div class="gallery-grid">
-
-            <div class="gallery-item">
-                <img src="couple3.jpg" alt="Vishnu and Ajisha">
-            </div>
-
-            <div class="gallery-item">
-                <img src="couple4.png" alt="Vishnu and Ajisha">
-            </div>
-
-            <div class="gallery-item">
-                <img src="couple1.jpg" alt="Vishnu and Ajisha">
-            </div>
-
-            <div class="gallery-item">
-                <img src="couple2.jpg" alt="Vishnu and Ajisha">
-            </div>
-
+            <div class="gallery-item"><img src="gallery-1.jpg" alt="Wedding memory 1"></div>
+            <div class="gallery-item"><img src="gallery-2.jpg" alt="Wedding memory 2"></div>
+            <div class="gallery-item"><img src="gallery-3.jpg" alt="Wedding memory 3"></div>
+            <div class="gallery-item"><img src="gallery-4.jpg" alt="Wedding memory 4"></div>
         </div>
-
     </div>
-
 </section>
-
 
 <!-- FAMILY -->
 
 <section class="family">
-
     <div class="container">
-
         <div class="heading">
-
-            <div class="small">
-                Our Families
-            </div>
-
-            <h2>
-                With the Blessings of Our Parents
-            </h2>
-
+            <div class="small">With Gratitude</div>
+            <h2>Family & Blessings</h2>
         </div>
 
         <div class="family-grid">
-
             <div class="family-card">
-
-                <h3>Groom's Family</h3>
-
-                <p>
-                    <strong>Vishnu Haridas</strong>
-                </p>
-
-                <p>
-                    Son of Haridasn &amp; Sheela
-                </p>
-
-                <p>
-                    Peechanangadath House<br>
-                    Civil Station, Kozhikode
-                </p>
-
+                <h3>Parents</h3>
+                <p>Warmly blessed by our families who have guided us with love, faith, and endless support.</p>
             </div>
-
-
             <div class="family-card">
-
-                <h3>Bride's Family</h3>
-
-                <p>
-                    <strong>Ajisha</strong>
-                </p>
-
-                <p>
-                    Daughter of Babu &amp; Seena
-                </p>
-
-                <p>
-                    Venginimukkath House<br>
-                    Kannankara
-                </p>
-
+                <h3>Friends</h3>
+                <p>Your presence and blessings mean the world to us as we begin this new chapter together.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- CLOSING -->
 
 <section class="closing">
-
     <div class="container">
-
-        <h2>
-            We Can't Wait to Celebrate With You
-        </h2>
-
-        <p>
-            Your presence, love and blessings mean the world to us.
-        </p>
-
-        <p class="script" style="font-size:38px;margin-top:20px;">
-            Vishnu &amp; Ajisha
-        </p>
-
+        <h2>Thank You</h2>
+        <p>We look forward to celebrating this joyful occasion with you.</p>
     </div>
-
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-    Vishnu &amp; Ajisha • 25 October 2026
-
+    © 2026 Vishnu & Ajisha • With love and gratitude
 </footer>
 
-
-<!-- COUNTDOWN SCRIPT -->
-
 <script>
+    const weddingDate = new Date('2026-10-25T11:00:00+05:30');
 
-const weddingDate = new Date("October 25, 2026 11:00:00").getTime();
+    function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
 
-function updateCountdown(){
+        if (diff <= 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+        }
 
-    const now = new Date().getTime();
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
 
-    const difference = weddingDate - now;
-
-    if(difference <= 0){
-
-        document.getElementById("days").innerText = "0";
-        document.getElementById("hours").innerText = "0";
-        document.getElementById("minutes").innerText = "0";
-        document.getElementById("seconds").innerText = "0";
-
-        return;
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
     }
 
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
-
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
-
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
-
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
-
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
-}
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 </script>
 
 </body>
